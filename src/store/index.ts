@@ -35,6 +35,7 @@ export default function Store(): Store {
     emoji: DEFAULT_EMOJI,
     activeGroup: '',
     skinTone: SKIN_TONE_NEUTRAL,
+    skinToneName: 'Neutral',
     options: defaultOptions,
     additionalGroups: {} as EmojiRecord,
     recent: [],

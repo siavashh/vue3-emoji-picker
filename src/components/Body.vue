@@ -1,5 +1,6 @@
 <template>
-  <div class="v3-body">
+  <div class="v3-body col-sm-12 col-md-8">
+    <Search v-if="hasSearch" />
     <div ref="bodyInner" :class="platform" class="v3-body-inner">
       <template v-if="orderedKeys.length">
         <div v-for="key of orderedKeys" :id="key" :key="key" class="v3-group">
@@ -54,7 +55,7 @@ import {
 /**
  * Internal dependencies
  */
-import {EmojiRecord, Emoji, Store, EmojiExt} from '../types'
+import { EmojiRecord, Emoji, Store, EmojiExt } from '../types'
 
 import {
   EMOJI_REMOTE_SRC,
@@ -68,9 +69,13 @@ import {
   isMac,
   snakeToCapitalizedCase,
 } from '../helpers'
+import Search from './Search.vue'
 
 export default defineComponent({
   name: 'Body',
+  components: {
+    Search,
+  },
   emits: {
     select: (emoji: EmojiExt) => true,
   },
@@ -86,6 +91,7 @@ export default defineComponent({
       )
     })
 
+    const hasSearch = computed(() => !state.options.hideSearch)
     const _this = getCurrentInstance()
     const hasGroupNames = computed(() => !state.options.hideGroupNames)
     const isSticky = computed(() => !state.options.disableStickyGroupNames)
@@ -156,6 +162,7 @@ export default defineComponent({
       platform,
       groupNames,
       orderedKeys,
+      hasSearch,
     }
   },
 })

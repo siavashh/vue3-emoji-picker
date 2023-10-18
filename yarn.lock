@@ -150,10 +150,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
-"@popperjs/core@^2.11.0":
-  "integrity" "sha512-zrsUxjLOKAzdewIDRWy9nsV1GQsKBCWaGwsZQlCgr6/q+vjyZhFgqedLfFBuI9anTPEUT4APq9Mu0SZBTzIcGQ=="
-  "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.0.tgz"
-  "version" "2.11.0"
+"@popperjs/core@^2.11.8":
+  "integrity" "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="
+  "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
+  "version" "2.11.8"
 
 "@rollup/pluginutils@^5.0.2":
   "integrity" "sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q=="
@@ -711,6 +711,11 @@
   "resolved" "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   "version" "1.0.0"
 
+"bootstrap@^5.3.2":
+  "integrity" "sha512-D32nmNWiQHo94BKHLmOrdjlL05q1c8oxbtBphQFb9Z5to6eGRDCm0QgeaZ4zFBHzfg2++rqa2JkqCcxDy0sH0g=="
+  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.2.tgz"
+  "version" "5.3.2"
+
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
   "resolved" "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -955,16 +960,6 @@
   dependencies:
     "ansi-colors" "^4.1.1"
     "strip-ansi" "^6.0.1"
-
-"esbuild-darwin-64@0.14.54":
-  "integrity" "sha512-jtdKWV3nBviOd5v4hOpkVmpxsBy90CGzebpbO9beiqUYVMBtSc0AL9zGftFuBon7PNDcdvNCEuQqw2x0wP9yug=="
-  "resolved" "https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-0.14.54.tgz"
-  "version" "0.14.54"
-
-"esbuild-darwin-64@0.15.18":
-  "integrity" "sha512-2WAvs95uPnVJPuYKP0Eqx+Dl/jaYseZEUUT1sjg97TJa4oBtbAKnPnl3b5M9l51/nbx7+QAEtuummJZW0sBEmg=="
-  "resolved" "https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-0.15.18.tgz"
-  "version" "0.15.18"
 
 "esbuild-darwin-arm64@0.14.54":
   "integrity" "sha512-OPafJHD2oUPyvJMrsCvDGkRrVCar5aVyHfWGQzY1dWnzErjrDuSETxwA2HSsyg2jORLY8yBfzc1MIpUkXlctmw=="

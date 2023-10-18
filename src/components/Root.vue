@@ -34,7 +34,7 @@
         <div
           ref="picker"
           class="v3-emoji-picker"
-          :class="'v3-color-theme-' + colorTheme"
+          :class="'v3-color-theme-' + colorTheme + ' theme-' + theme"
         >
           <Header />
           <Body @select="onSelect" />
@@ -43,10 +43,24 @@
       </div>
     </div>
   </div>
-  <div v-else class="v3-emoji-picker" :class="'v3-color-theme-' + colorTheme">
+  <div
+    v-else-if="!isFullPage"
+    class="v3-emoji-picker"
+    :class="'v3-color-theme-' + colorTheme + ' theme-' + theme"
+  >
     <Header />
     <Body @select="onSelect" />
     <Footer />
+  </div>
+  <div
+    v-else
+    class="v3-emoji-picker full-page-mode"
+    :class="'container v3-color-theme-' + colorTheme + ' theme-' + theme"
+  >
+    <div class="row">
+      <Sidebar />
+      <Body @select="onSelect" />
+    </div>
   </div>
 </template>
 
@@ -61,6 +75,7 @@ import {
   onBeforeUnmount,
   inject,
   computed,
+  toRaw,
 } from 'vue'
 import { createPopper } from '@popperjs/core'
 
@@ -70,6 +85,7 @@ import { createPopper } from '@popperjs/core'
 import smileys_people from '../svgs/groups/smileys_people.svg'
 import Body from './Body.vue'
 import Header from './Header.vue'
+import Sidebar from './Sidebar.vue'
 import Footer from './Footer.vue'
 import { EmojiExt, Store } from '../types'
 
@@ -77,6 +93,7 @@ export default defineComponent({
   name: 'PickerRoot',
   components: {
     Header,
+    Sidebar,
     Body,
     Footer,
   },
@@ -117,9 +134,11 @@ export default defineComponent({
     const open = ref(false)
     const input = ref(props.text)
     const isInputType = props.type === 'input' || props.type === 'textarea'
+    const isFullPage = props.type == 'full-page'
     let cursor = -1
     const { state } = inject('store') as Store
     const colorTheme = computed(() => state.options.colorTheme)
+    const theme = computed(() => state.options.theme)
 
     /**
      * Functions
@@ -212,8 +231,10 @@ export default defineComponent({
       button,
       picker,
       isInputType,
+      isFullPage,
       onChangeText,
       colorTheme,
+      theme,
     }
   },
 })

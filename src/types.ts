@@ -18,6 +18,8 @@ export type GroupKeys =
 
 export type ColorTheme = 'dark' | 'light' | 'auto'
 
+export type Theme = 'bootstrap'
+
 export type GroupNames = Record<GroupKeys, string>
 
 export interface Group {
@@ -53,6 +55,7 @@ export interface State {
   emoji: Emoji
   activeGroup: string
   skinTone: string
+  skinToneName: string
   options: Record<string, any>
   recent: Emoji[]
   orderedGroupKeys: string[]

@@ -1,4 +1,7 @@
 .v3-emoji-picker {
+  &.theme-bootstrap{
+    @import "@bootstrap/scss/bootstrap";
+  }
   // picker body
   .v3-body {
     padding: 0 0 15px 11px;

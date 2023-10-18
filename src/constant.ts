@@ -1,4 +1,4 @@
-import { ColorTheme, Emoji, GroupNames } from './types'
+import { ColorTheme, Emoji, GroupNames, Theme } from './types'
 
 export const EMOJI_REMOTE_SRC =
   'https://cdn.jsdelivr.net/npm/emoji-datasource-apple@6.0.1/img/apple/64'
@@ -49,3 +49,4 @@ export const STATIC_TEXTS = {
 }
 
 export const COLOR_THEMES: Array<ColorTheme> = ['light', 'dark', 'auto']
+export const THEMES: Array<Theme> = ['bootstrap']

@@ -1,39 +1,10 @@
 <template>
   <h2>Default</h2>
-  <picker :native="false" :display-recent="true" @select="onSelect" />
-
-  <h2>Native + Dark Theme</h2>
-  <picker theme="dark" :native="true" @select="onSelect" />
-
-  <h2>Additional groups</h2>
-  <picker :additional-groups="additionalGroups" @select="onSelect" />
-
-  <h2>With input</h2>
   <picker
-    :text="text"
-    picker-type="input"
-    @select="onSelect"
-    @update:text="onChangeText"
-  />
-
-  <h2>With textarea + Dark Theme</h2>
-  <picker
-    theme="dark"
-    :text="text"
-    picker-type="textarea"
-    @select="onSelect"
-    @update:text="onChangeText"
-  />
-
-  <h2>With group ordering and additional groups</h2>
-  <picker
-    :additional-groups="additionalGroups"
-    :group-names="{
-      smileys_people: 'Smileys!',
-      my_custom_group: 'Custom Group',
-    }"
-    :group-order="['flags', 'my_custom_group', 'smileys_people']"
-    :group-icons="{ my_custom_group: custom }"
+    :native="false"
+    :display-recent="true"
+    picker-type="full-page"
+    theme="bootstrap"
     @select="onSelect"
   />
 </template>
@@ -107,7 +78,6 @@ h2 {
   text-align: center;
   color: #2c3e50;
   margin: 60px auto 0;
-  max-width: 560px;
 }
 .input-wrap {
   input {
