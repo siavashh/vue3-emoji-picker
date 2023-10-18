@@ -1,84 +1,82 @@
 .v3-emoji-picker {
-    &.full-page-mode{
-        width:auto;
-        box-shadow: none;
-        .v3-sidebar{
-            .v3-hovered-icon{
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                border-radius:20px;
-                margin-bottom: 1em;
-                width:100%;
-                padding:1em;
-                border:1px solid #ccc;
-                .v3-icon{
-                    display: inline-flex;
-                    height: 36px;
-                    width: 36px;
-                    vertical-align: middle;
-                    align-self: center;
-                }
-            }
+  &.full-page-mode {
+    width: auto;
+    box-shadow: none;
+    .v3-sidebar {
+      .v3-hovered-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        margin-bottom: 1em;
+        width: 100%;
+        padding: 1em;
+        border: 1px solid #ccc;
+        .v3-icon {
+          display: inline-flex;
+          height: 36px;
+          width: 36px;
+          vertical-align: middle;
+          align-self: center;
         }
-        .v3-groups-vertical{
-            flex-direction: column;
-            align-items: flex-start;
-            .v3-category-title{
-                font-size: 14px;
-            }
-            .v3-group{
-                padding: 5px 10px;
-                border-radius:20px;
-                font-weight:bold;
-                border:none;
-                background:white;
-                &.selected{
-                    opacity:1;
-                    background:white;
-                    color: black;
-                    border:1px solid #ccc;
-                    .v3-category-title{
-                        color: black;
-                    }
-                }
-            }
-        }
-        .v3-sidebar-title{
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        .v3-sidebar-header{
-            border:none;
-        }
-        .v3-sidebar-footer{
-            flex-direction: column;
-            align-items: flex-start;
-            border:none;
-            .v3-skin-tones-vertical{
-                flex-direction: column;
-                position: inherit;
-                align-items: flex-start;
-                padding:0;
-                button {
-
-                    i{
-                        border-radius:50%;
-                        width:16px;
-                        height:16px;
-                    }
-                }
-            }
-        }
-        
-        .v3-body .v3-body-inner .v3-group .v3-emojis button{
-            flex-basis: 5%;
-            max-width:36px
-        }
-        .v3-body-inner{
-            max-height:600px;
-        }
+      }
     }
-}
+    .v3-groups-vertical {
+      flex-direction: column;
+      align-items: flex-start;
+      .v3-category-title {
+        font-size: 14px;
+      }
+      .v3-group {
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: none;
+        background: white;
+        &.selected {
+          opacity: 1;
+          background: white;
+          color: black;
+          border: 1px solid #ccc;
+          .v3-category-title {
+            color: black;
+          }
+        }
+      }
+    }
+    .v3-sidebar-title {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .v3-sidebar-header {
+      border: none;
+    }
+    .v3-sidebar-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      border: none;
+      .v3-skin-tones-vertical {
+        flex-direction: column;
+        position: inherit;
+        align-items: flex-start;
+        padding: 0;
+        button {
+          i {
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
 
+    .v3-body .v3-body-inner .v3-group .v3-emojis button {
+      flex-basis: 5%;
+      max-width: 36px;
+    }
+    .v3-body-inner {
+      max-height: 600px;
+    }
+  }
+}
